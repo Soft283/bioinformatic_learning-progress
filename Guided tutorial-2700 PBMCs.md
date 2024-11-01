@@ -35,11 +35,15 @@ pbmc  #简单查看一下这个对象
 class(pbmc)
 
 ```
+
+```
  An object of class Seurat 
  13714 features across 2700 samples within 1 assay 
  Active assay: RNA (13714 features, 0 variable features)
  1 layer present: counts
 ```
+
+
 ```
 Warning: Feature names cannot have underscores ('_'), replacing with dashes ('-')
 #运行CreateSeuratObject这个过程的时候如果出现这个问题，无需在意，这是原数据的问题不是我们的问题啊。
@@ -272,15 +276,16 @@ DotPlot(pbmc,features = c("MS4A1", "CD79A"))
 ## 通过分子marker确认这些细胞
 
 |Cluster ID	|Markers	|Cell Type|
-|0	|IL7R, CCR7 |	Naive CD4+ T
-|1	|CD14, LYZ	| CD14+ Mono
-|2	|IL7R, S100A4 |	Memory CD4+
-|3	|MS4A1	|B
-|4	|CD8A	|CD8+ T
-|5	|FCGR3A, MS4A7	|FCGR3A+ Mono
-|6	|GNLY, NKG7 |	NK
-|7	|FCER1A, CST3	|DC
-|8	|PPBP	|Platelet
+|-----------|--------|---------|
+|0	|IL7R, CCR7 |	Naive CD4+ T|
+|1	|CD14, LYZ	| CD14+ Mono|
+|2	|IL7R, S100A4 |	Memory CD4+|
+|3	|MS4A1	|B|
+|4	|CD8A	|CD8+ T|
+|5	|FCGR3A, MS4A7	|FCGR3A+ Mono|
+|6	|GNLY, NKG7 |	NK|
+|7	|FCER1A, CST3	|DC|
+|8	|PPBP	|Platelet|
 
 ```
 new.cluster.ids <- c("Naive CD4 T", "CD14+ Mono", "Memory CD4 T", "B", "CD8 T", "FCGR3A+ Mono",
