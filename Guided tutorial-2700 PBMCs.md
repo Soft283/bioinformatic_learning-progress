@@ -53,7 +53,8 @@ Warning: Feature names cannot have underscores ('_'), replacing with dashes ('-'
 
 接着简单查看一下这个数据的格式（事实上我也是很后面才慢慢理解这个格式的问题的，我觉得暂时不理解也没什么问题。）
 
-~~不好意思，我是笨蛋，目前还没解决github如何上传图片，这个问题将会在后续的修改当中进行改正。~~
+
+
 
 # standard pre-processing workflow
 
@@ -88,7 +89,7 @@ AAACGCACTGGTAC-1  1.6643551
 VlnPlot(pbmc, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
 ```
 
-还是因为的图片没弄得很好，我打算在之后的视频里进行简单的讲解，目前大家可以先跳过这一步也没关系。
+![Vlnplot](https://github.com/Soft283/bioinformatic_learning-progress/blob/Seurat-tutorial/Images/vlnplot.png)
 
 过滤掉上述的数据
 
