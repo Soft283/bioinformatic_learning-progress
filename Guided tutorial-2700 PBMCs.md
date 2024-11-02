@@ -53,6 +53,31 @@ Warning: Feature names cannot have underscores ('_'), replacing with dashes ('-'
 
 接着简单查看一下这个数据的格式（事实上我也是很后面才慢慢理解这个格式的问题的，我觉得暂时不理解也没什么问题。）
 
+![@assay中的结构](https://github.com/Soft283/bioinformatic_learning-progress/blob/Seurat-tutorial/Images/1.png)]
+
+@assay 当中存放的是数据的相关信息
+
+seurat的格式其实有点像是文件夹
+
+@assay$RNA这个文件夹中的存储的RNA的一些表达量的矩阵
+
+我们可以简单的看一下这些数据
+
+```
+head(pbmc@assays$RNA@counts)
+```
+
+!["dgCMatrix"](https://github.com/Soft283/bioinformatic_learning-progress/blob/Seurat-tutorial/Images/dgCMatrix.png)
+
+虽然不是特别好，但是也足够我们了解这个结构了
+
+可以看到在counts这个矩阵里存储的是基因的表达量，每一行其实是每个基因在不同的细胞当中的表达量。
+
+左边的列名是不同的基因，横着的点因为名字太长了没被显示出来AAACATCA-1,这些其实是不同细胞的标签。
+
+同样类似的，counts这个矩阵一般存放的是原始的基因表达量的数据，data中存放的是normaliztion后的数据，scale.data中存放的是scaledata后的数据。
+
+此外，一般来说seurat的内置函数都是有相应要求的，比如如果你希望对数据进行normaliztion的操作，函数会自动调用counts当中的数据进行相关的计算，包括后续的降维的相关操作，必须使用scaledata的数据。
 
 
 
