@@ -19,6 +19,7 @@ library(Seurat)
 library(patchwork)
 
 如果出现问题的话，可以问问ai怎么安装
+
 install.packages("Seurat") 一般来说这些比较常见的包是可以直接安装的
 
 # load data
